@@ -13,6 +13,9 @@ def searchPortByDeviceName():
         print('Ardunoは接続されていません')
         return None
 
+def sendPowerOn():
+    pass
+
 def main():
     port = searchPortByDeviceName()
     print(port)
@@ -34,5 +37,20 @@ def main():
         print(count)
     ard_ser.close()
 
+"""
+import cv2
+
+# VideoCapture オブジェクトを取得します
+capture = cv2.VideoCapture(0)
+
+while(True):
+    ret, frame = capture.read()
+    cv2.imshow('frame',frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+capture.release()
+cv2.destroyAllWindows()
+"""
 
 main()
